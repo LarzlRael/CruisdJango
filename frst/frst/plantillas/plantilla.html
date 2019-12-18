@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Esta parte pertenenca a otro lugar </h2>
+    {% include "barra.html" %}
+    <h1>Esta mi primera pagina desde django con plantillad</h1>
+    <h2>Se que eres : {{nombre_persona}} y apellido es : {{apellido_persona}}</h2>
+    <h4>La hora que es : {{ahora.day}} / {{ahora.month}} / {{ahora.year}}</h4>
+    <label for="">Las marcas que te gustan son ; </label>
+
+    {% if Marcas %}
+    <ul>
+        {% for marca in Marcas %}
+        <li>{{marca}}</li>
+
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h2>No hay temas puerco no lo entiendes?</h2>
+    {% endif %}
+</body>
+
+</html>
